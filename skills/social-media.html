@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Social Media Management — Md. Shahadat Hosain</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/skill-page.css">
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="nav-brand">
+    <div class="nav-avatar">MSH</div>
+    <span class="nav-brand-name">Md. Shahadat Hosain</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../index.html#skills" class="active">Skills</a></li>
+    <li><a href="../index.html#services">Services</a></li>
+    <li><a href="../index.html#contact">Contact</a></li>
+  </ul>
+  <a href="../index.html#contact" class="nav-contact">Contact</a>
+  <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html" onclick="closeMobile()">Home</a>
+  <a href="../index.html#skills" onclick="closeMobile()">Skills</a>
+  <a href="../index.html#services" onclick="closeMobile()">Services</a>
+  <a href="../index.html#contact" onclick="closeMobile()">Contact</a>
+</div>
+
+<div class="skill-hero" style="--hero-color1:#fce7f3;--hero-color2:#dbeafe;--hero-color3:#ede9fe;">
+  <div class="skill-hero-bg"></div>
+  <div class="skill-hero-content">
+    <a href="../index.html#skills" class="back-btn">← Back to Skills</a>
+    <div class="skill-hero-icon">📱</div>
+    <h1 class="skill-hero-title">Social Media Management</h1>
+    <p class="skill-hero-subtitle">Facebook · Instagram · LinkedIn · Content Strategy · Growth</p>
+    <p class="skill-hero-desc">Growing your brand online through strategic content, consistent engagement and data-driven decisions.</p>
+  </div>
+</div>
+
+<main class="skill-main">
+
+  <section class="skill-section">
+    <h2 class="skill-section-title">About This Skill</h2>
+    <p class="skill-text">Social media is one of the most powerful tools for building brand awareness and connecting with customers. I manage your social presence end-to-end — creating content, engaging your audience, and growing your following in a way that reflects your brand's personality and drives real business results.</p>
+  </section>
+
+  <section class="skill-section">
+    <h2 class="skill-section-title">Tools I Use</h2>
+    <div class="tool-grid">
+      <div class="tool-item"><span class="tool-icon">📘</span><span>Facebook Business</span></div>
+      <div class="tool-item"><span class="tool-icon">📸</span><span>Instagram</span></div>
+      <div class="tool-item"><span class="tool-icon">💼</span><span>LinkedIn</span></div>
+      <div class="tool-item"><span class="tool-icon">🕒</span><span>Buffer</span></div>
+      <div class="tool-item"><span class="tool-icon">🦉</span><span>Hootsuite</span></div>
+      <div class="tool-item"><span class="tool-icon">🎨</span><span>Canva</span></div>
+    </div>
+  </section>
+
+  <section class="skill-section">
+    <h2 class="skill-section-title">What I Offer</h2>
+    <div class="offer-list">
+      <div class="offer-item"><div class="offer-check">✓</div><div><strong>Profile Setup & Optimization</strong><p>Complete social media profile creation with optimized bios, keywords and branding.</p></div></div>
+      <div class="offer-item"><div class="offer-check">✓</div><div><strong>Content Calendar & Scheduling</strong><p>Monthly content plans with a consistent posting schedule across all platforms.</p></div></div>
+      <div class="offer-item"><div class="offer-check">✓</div><div><strong>Post Design & Copywriting</strong><p>Scroll-stopping visuals paired with engaging captions and calls-to-action.</p></div></div>
+      <div class="offer-item"><div class="offer-check">✓</div><div><strong>Audience Growth Strategies</strong><p>Organic growth tactics including hashtag research, engagement campaigns and collaborations.</p></div></div>
+      <div class="offer-item"><div class="offer-check">✓</div><div><strong>Community Management</strong><p>Responding to comments and messages to build genuine connections with your audience.</p></div></div>
+      <div class="offer-item"><div class="offer-check">✓</div><div><strong>Analytics & Monthly Reports</strong><p>Performance tracking with clear reports on reach, engagement and follower growth.</p></div></div>
+    </div>
+  </section>
+
+  <section class="skill-section">
+    <h2 class="skill-section-title">Why Choose Me?</h2>
+    <div class="why-grid">
+      <div class="why-card"><div class="why-num">01</div><h3>Authentic Voice</h3><p>I write content that sounds like you — not like a generic brand template.</p></div>
+      <div class="why-card"><div class="why-num">02</div><h3>Consistent Posting</h3><p>Regular, on-schedule content that keeps your audience engaged and the algorithm happy.</p></div>
+      <div class="why-card"><div class="why-num">03</div><h3>Growth-Focused</h3><p>Every action is measured and optimized to grow your reach and convert followers into customers.</p></div>
+    </div>
+  </section>
+
+  <div class="skill-cta-section">
+    <h2>Ready to grow your social presence?</h2>
+    <p>Let's build an audience that loves your brand.</p>
+    <div class="skill-cta-btns">
+      <a href="../index.html#contact" class="modal-btn modal-btn-primary">Hire Me</a>
+      <a href="https://wa.me/8801868901103" target="_blank" class="modal-btn modal-btn-outline">WhatsApp Me</a>
+    </div>
+  </div>
+
+</main>
+
+<footer><p>&copy; 2026 <span>Md. Shahadat Hosain</span>. All rights reserved.</p></footer>
+<script>
+const hamburger=document.getElementById('hamburger');
+const mobileMenu=document.getElementById('mobileMenu');
+hamburger.addEventListener('click',()=>{hamburger.classList.toggle('open');mobileMenu.classList.toggle('open');});
+function closeMobile(){hamburger.classList.remove('open');mobileMenu.classList.remove('open');}
+</script>
+</body>
+</html>

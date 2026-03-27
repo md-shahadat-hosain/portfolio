@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Website Management — Md. Shahadat Hosain</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/skill-page.css">
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="nav-brand">
+    <div class="nav-avatar">MSH</div>
+    <span class="nav-brand-name">Md. Shahadat Hosain</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../index.html#skills" class="active">Skills</a></li>
+    <li><a href="../index.html#services">Services</a></li>
+    <li><a href="../index.html#contact">Contact</a></li>
+  </ul>
+  <a href="../index.html#contact" class="nav-contact">Contact</a>
+  <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html" onclick="closeMobile()">Home</a>
+  <a href="../index.html#skills" onclick="closeMobile()">Skills</a>
+  <a href="../index.html#services" onclick="closeMobile()">Services</a>
+  <a href="../index.html#contact" onclick="closeMobile()">Contact</a>
+</div>
+
+<div class="skill-hero" style="--hero-color1:#dbeafe;--hero-color2:#ede9fe;--hero-color3:#d1fae5;">
+  <div class="skill-hero-bg"></div>
+  <div class="skill-hero-content">
+    <a href="../index.html#skills" class="back-btn">← Back to Skills</a>
+    <div class="skill-hero-icon">🌐</div>
+    <h1 class="skill-hero-title">Website Management</h1>
+    <p class="skill-hero-subtitle">WordPress · SEO · Content · Performance · Maintenance</p>
+    <p class="skill-hero-desc">Keeping your website fast, secure, updated and optimized so you can focus on running your business.</p>
+  </div>
+</div>
+
+<main class="skill-main">
+
+  <section class="skill-section">
+    <h2 class="skill-section-title">About This Skill</h2>
+    <p class="skill-text">A great website needs ongoing care. I provide end-to-end website management — from keeping content fresh and plugins updated, to improving page speed and search engine rankings. Whether you're on WordPress or another CMS, I ensure your site always looks great and performs well.</p>
+  </section>
+
+  <section class="skill-section">
+    <h2 class="skill-section-title">Tools I Use</h2>
+    <div class="tool-grid">
+      <div class="tool-item"><span class="tool-icon">🌐</span><span>WordPress</span></div>
+      <div class="tool-item"><span class="tool-icon">⚡</span><span>Elementor</span></div>
+      <div class="tool-item"><span class="tool-icon">🖥️</span><span>cPanel</span></div>
+      <div class="tool-item"><span class="tool-icon">🔍</span><span>Google Search Console</span></div>
+      <div class="tool-item"><span class="tool-icon">🟢</span><span>Yoast SEO</span></div>
+      <div class="tool-item"><span class="tool-icon">☁️</span><span>Cloudflare</span></div>
+    </div>
+  </section>
+
+  <section class="skill-section">
+    <h2 class="skill-section-title">What I Offer</h2>
+    <div class="offer-list">
+      <div class="offer-item"><div class="offer-check">✓</div><div><strong>WordPress Setup & Customization</strong><p>Theme installation, plugin configuration and full website setup from scratch.</p></div></div>
+      <div class="offer-item"><div class="offer-check">✓</div><div><strong>Content Updates & Blog Management</strong><p>Regular page updates, new blog posts and media management to keep content fresh.</p></div></div>
+      <div class="offer-item"><div class="offer-check">✓</div><div><strong>On-Page SEO Optimization</strong><p>Meta tags, keyword optimization, image alt text, sitemaps and technical SEO fixes.</p></div></div>
+      <div class="offer-item"><div class="offer-check">✓</div><div><strong>Speed & Performance Optimization</strong><p>Image compression, caching, CDN setup and Core Web Vitals improvements.</p></div></div>
+      <div class="offer-item"><div class="offer-check">✓</div><div><strong>Plugin & Theme Management</strong><p>Safe updates, compatibility checks and troubleshooting for all plugins and themes.</p></div></div>
+      <div class="offer-item"><div class="offer-check">✓</div><div><strong>Backups & Security Monitoring</strong><p>Regular backups, malware scanning, SSL management and uptime monitoring.</p></div></div>
+    </div>
+  </section>
+
+  <section class="skill-section">
+    <h2 class="skill-section-title">Why Choose Me?</h2>
+    <div class="why-grid">
+      <div class="why-card"><div class="why-num">01</div><h3>Proactive Care</h3><p>I don't wait for things to break — I monitor and maintain so issues are caught early.</p></div>
+      <div class="why-card"><div class="why-num">02</div><h3>SEO-Aware</h3><p>Every update I make considers search engine visibility, not just visual appearance.</p></div>
+      <div class="why-card"><div class="why-num">03</div><h3>Clear Communication</h3><p>Regular reports so you always know what was done and why — no technical jargon.</p></div>
+    </div>
+  </section>
+
+  <div class="skill-cta-section">
+    <h2>Need a website managed professionally?</h2>
+    <p>Let me handle the tech so you can focus on your business.</p>
+    <div class="skill-cta-btns">
+      <a href="../index.html#contact" class="modal-btn modal-btn-primary">Hire Me</a>
+      <a href="https://wa.me/8801868901103" target="_blank" class="modal-btn modal-btn-outline">WhatsApp Me</a>
+    </div>
+  </div>
+
+</main>
+
+<footer><p>&copy; 2026 <span>Md. Shahadat Hosain</span>. All rights reserved.</p></footer>
+<script>
+const hamburger=document.getElementById('hamburger');
+const mobileMenu=document.getElementById('mobileMenu');
+hamburger.addEventListener('click',()=>{hamburger.classList.toggle('open');mobileMenu.classList.toggle('open');});
+function closeMobile(){hamburger.classList.remove('open');mobileMenu.classList.remove('open');}
+</script>
+</body>
+</html>

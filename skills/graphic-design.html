@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Graphic Design — Md. Shahadat Hosain</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/skill-page.css">
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="nav-brand">
+    <div class="nav-avatar">MSH</div>
+    <span class="nav-brand-name">Md. Shahadat Hosain</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../index.html#skills" class="active">Skills</a></li>
+    <li><a href="../index.html#services">Services</a></li>
+    <li><a href="../index.html#contact">Contact</a></li>
+  </ul>
+  <a href="../index.html#contact" class="nav-contact">Contact</a>
+  <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html" onclick="closeMobile()">Home</a>
+  <a href="../index.html#skills" onclick="closeMobile()">Skills</a>
+  <a href="../index.html#services" onclick="closeMobile()">Services</a>
+  <a href="../index.html#contact" onclick="closeMobile()">Contact</a>
+</div>
+
+<div class="skill-hero" style="--hero-color1:#fce7f3;--hero-color2:#ede9fe;--hero-color3:#fef9c3;">
+  <div class="skill-hero-bg"></div>
+  <div class="skill-hero-content">
+    <a href="../index.html#skills" class="back-btn">← Back to Skills</a>
+    <div class="skill-hero-icon">🎨</div>
+    <h1 class="skill-hero-title">Graphic Design</h1>
+    <p class="skill-hero-subtitle">Minimal & Normal Design · Branding · Visual Identity</p>
+    <p class="skill-hero-desc">Creating clean, purposeful visuals that communicate your message and elevate your brand presence.</p>
+  </div>
+</div>
+
+<main class="skill-main">
+
+  <section class="skill-section">
+    <h2 class="skill-section-title">About This Skill</h2>
+    <p class="skill-text">I design with intention — every element has a purpose. Specializing in minimal and normal graphic design, I create visuals that are clear, elegant, and effective. From brand identities to social media assets, my work helps businesses look professional and consistent across all touchpoints.</p>
+  </section>
+
+  <section class="skill-section">
+    <h2 class="skill-section-title">Tools I Use</h2>
+    <div class="tool-grid">
+      <div class="tool-item"><span class="tool-icon">🖌️</span><span>Canva</span></div>
+      <div class="tool-item"><span class="tool-icon">🖼️</span><span>Photoshop</span></div>
+      <div class="tool-item"><span class="tool-icon">✏️</span><span>Illustrator</span></div>
+      <div class="tool-item"><span class="tool-icon">🎯</span><span>Figma</span></div>
+      <div class="tool-item"><span class="tool-icon">🌀</span><span>CorelDRAW</span></div>
+      <div class="tool-item"><span class="tool-icon">📐</span><span>Adobe Express</span></div>
+    </div>
+  </section>
+
+  <section class="skill-section">
+    <h2 class="skill-section-title">What I Offer</h2>
+    <div class="offer-list">
+      <div class="offer-item"><div class="offer-check">✓</div><div><strong>Logo & Brand Identity</strong><p>Unique logos and full brand kits including color palettes, typography and usage guidelines.</p></div></div>
+      <div class="offer-item"><div class="offer-check">✓</div><div><strong>Social Media Graphics</strong><p>Eye-catching posts, stories, banners and ads designed for every platform.</p></div></div>
+      <div class="offer-item"><div class="offer-check">✓</div><div><strong>Flyer & Poster Design</strong><p>Print-ready and digital designs for events, promotions and marketing campaigns.</p></div></div>
+      <div class="offer-item"><div class="offer-check">✓</div><div><strong>Business Cards & Stationery</strong><p>Professional card designs, letterheads, envelopes and office stationery sets.</p></div></div>
+      <div class="offer-item"><div class="offer-check">✓</div><div><strong>YouTube & Digital Content</strong><p>Thumbnails, channel art, banners and digital content graphics that grab attention.</p></div></div>
+      <div class="offer-item"><div class="offer-check">✓</div><div><strong>Infographics</strong><p>Data visualizations and infographics that make complex information easy to understand.</p></div></div>
+    </div>
+  </section>
+
+  <section class="skill-section">
+    <h2 class="skill-section-title">Why Choose Me?</h2>
+    <div class="why-grid">
+      <div class="why-card"><div class="why-num">01</div><h3>Clean Aesthetic</h3><p>I favour minimal, purposeful design that communicates clearly without visual clutter.</p></div>
+      <div class="why-card"><div class="why-num">02</div><h3>Brand Consistency</h3><p>Every design follows your brand guidelines and maintains consistent style across all materials.</p></div>
+      <div class="why-card"><div class="why-num">03</div><h3>Unlimited Revisions</h3><p>I refine until you're happy. Your satisfaction is the only finish line.</p></div>
+    </div>
+  </section>
+
+  <div class="skill-cta-section">
+    <h2>Ready to elevate your brand?</h2>
+    <p>Let's create something beautiful together.</p>
+    <div class="skill-cta-btns">
+      <a href="../index.html#contact" class="modal-btn modal-btn-primary">Hire Me</a>
+      <a href="https://wa.me/8801868901103" target="_blank" class="modal-btn modal-btn-outline">WhatsApp Me</a>
+    </div>
+  </div>
+
+</main>
+
+<footer><p>&copy; 2026 <span>Md. Shahadat Hosain</span>. All rights reserved.</p></footer>
+<script>
+const hamburger=document.getElementById('hamburger');
+const mobileMenu=document.getElementById('mobileMenu');
+hamburger.addEventListener('click',()=>{hamburger.classList.toggle('open');mobileMenu.classList.toggle('open');});
+function closeMobile(){hamburger.classList.remove('open');mobileMenu.classList.remove('open');}
+</script>
+</body>
+</html>
