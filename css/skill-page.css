@@ -1,0 +1,192 @@
+/* ============================================================
+   skill-page.css — Styles for individual skill detail pages
+   ============================================================ */
+
+/* ── SKILL HERO ──────────────────────────────────────────── */
+.skill-hero {
+  padding-top: 70px;
+  min-height: 42vh;
+  position: relative;
+  display: flex; align-items: center;
+  overflow: hidden;
+}
+.skill-hero-bg {
+  position: absolute; inset: 0;
+  background: linear-gradient(
+    135deg,
+    var(--hero-color1, #f5f3ff) 0%,
+    var(--hero-color2, #fce7f3) 55%,
+    var(--hero-color3, #d1fae5) 100%
+  );
+  z-index: 0;
+}
+.skill-hero-bg::after {
+  content: '';
+  position: absolute; bottom: -2px; left: 0; right: 0;
+  height: 80px;
+  background: white;
+  clip-path: ellipse(55% 100% at 50% 100%);
+}
+.skill-hero-content {
+  position: relative; z-index: 1;
+  max-width: 700px; margin: 0 auto;
+  padding: 3rem 6% 4rem;
+  text-align: center;
+  animation: fadeUp 0.6s ease both;
+}
+.back-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 0.85rem; font-weight: 600; color: var(--purple);
+  text-decoration: none; margin-bottom: 1.5rem;
+  padding: 0.4rem 1rem; border-radius: 50px;
+  background: rgba(124,58,237,0.1);
+  transition: all 0.2s;
+}
+.back-btn:hover { background: var(--purple); color: white; }
+.skill-hero-icon {
+  font-size: 3.5rem; margin-bottom: 1rem; display: block;
+}
+.skill-hero-title {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 800; color: var(--text); line-height: 1.15; margin-bottom: 0.6rem;
+}
+.skill-hero-subtitle {
+  font-size: 0.9rem; font-weight: 500; color: var(--purple);
+  margin-bottom: 1rem; letter-spacing: 0.04em;
+}
+.skill-hero-desc {
+  font-size: 1rem; font-weight: 400; color: var(--text2);
+  line-height: 1.7; max-width: 540px; margin: 0 auto;
+}
+
+/* ── MAIN CONTENT ────────────────────────────────────────── */
+.skill-main {
+  max-width: 860px; margin: 0 auto;
+  padding: 3rem 6% 5rem;
+}
+.skill-section { margin-bottom: 3.5rem; }
+.skill-section-title {
+  font-size: 1.1rem; font-weight: 800; color: var(--text);
+  margin-bottom: 1.2rem; padding-bottom: 0.6rem;
+  border-bottom: 2px solid var(--purple-light);
+  display: flex; align-items: center; gap: 8px;
+}
+.skill-section-title::before {
+  content: '';
+  display: inline-block; width: 4px; height: 18px;
+  background: linear-gradient(var(--purple), var(--pink));
+  border-radius: 2px; flex-shrink: 0;
+}
+.skill-text {
+  font-size: 1rem; line-height: 1.8; color: var(--text2); font-weight: 400;
+}
+
+/* ── TOOL GRID ───────────────────────────────────────────── */
+.tool-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 1rem;
+}
+.tool-item {
+  display: flex; align-items: center; gap: 10px;
+  padding: 0.85rem 1.1rem;
+  background: var(--purple-soft);
+  border: 1px solid rgba(124,58,237,0.1);
+  border-radius: 12px;
+  font-size: 0.88rem; font-weight: 600; color: var(--text);
+  transition: all 0.2s;
+}
+.tool-item:hover {
+  background: var(--purple-light);
+  border-color: rgba(124,58,237,0.25);
+  transform: translateY(-2px);
+}
+.tool-icon { font-size: 1.2rem; flex-shrink: 0; }
+
+/* ── OFFER LIST ──────────────────────────────────────────── */
+.offer-list { display: flex; flex-direction: column; gap: 1.1rem; }
+.offer-item {
+  display: flex; gap: 1rem; align-items: flex-start;
+  padding: 1.2rem 1.4rem;
+  background: #fafafa;
+  border: 1px solid rgba(124,58,237,0.07);
+  border-radius: 14px; transition: all 0.2s;
+}
+.offer-item:hover {
+  background: var(--purple-soft);
+  border-color: rgba(124,58,237,0.15);
+  transform: translateX(4px);
+}
+.offer-check {
+  width: 28px; height: 28px; border-radius: 50%;
+  background: var(--purple-light); color: var(--purple);
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 800; font-size: 0.85rem; flex-shrink: 0; margin-top: 1px;
+}
+.offer-item strong {
+  display: block; font-size: 0.95rem; font-weight: 700;
+  color: var(--text); margin-bottom: 3px;
+}
+.offer-item p {
+  font-size: 0.85rem; font-weight: 400; color: var(--text2); line-height: 1.5; margin: 0;
+}
+
+/* ── WHY GRID ────────────────────────────────────────────── */
+.why-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.2rem;
+}
+.why-card {
+  padding: 1.5rem;
+  background: white;
+  border: 1px solid rgba(124,58,237,0.08);
+  border-radius: 16px; transition: all 0.25s;
+}
+.why-card:hover {
+  transform: translateY(-4px); box-shadow: 0 12px 32px rgba(124,58,237,0.1);
+  border-color: rgba(124,58,237,0.2);
+}
+.why-num {
+  font-size: 2rem; font-weight: 800;
+  background: linear-gradient(135deg, var(--purple-light), #fce7f3);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text; -webkit-text-stroke: 1px rgba(124,58,237,0.25);
+  line-height: 1; margin-bottom: 0.8rem;
+}
+.why-card h3 {
+  font-size: 0.95rem; font-weight: 700; color: var(--text); margin-bottom: 0.4rem;
+}
+.why-card p {
+  font-size: 0.85rem; font-weight: 400; color: var(--text2); line-height: 1.6; margin: 0;
+}
+
+/* ── CTA SECTION ─────────────────────────────────────────── */
+.skill-cta-section {
+  text-align: center; padding: 3rem 2rem;
+  background: linear-gradient(135deg, var(--purple-soft), #fce7f3);
+  border-radius: 24px;
+  border: 1px solid rgba(124,58,237,0.12);
+}
+.skill-cta-section h2 {
+  font-size: 1.5rem; font-weight: 800; color: var(--text); margin-bottom: 0.5rem;
+}
+.skill-cta-section p {
+  font-size: 0.95rem; color: var(--text2); margin-bottom: 1.5rem;
+}
+.skill-cta-btns {
+  display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
+}
+
+/* ── RESPONSIVE ──────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .skill-hero-content { padding: 2.5rem 5% 3.5rem; }
+  .skill-main { padding: 2.5rem 5% 4rem; }
+  .tool-grid { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); }
+  .why-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  .skill-hero-title { font-size: 1.6rem; }
+  .tool-grid { grid-template-columns: 1fr 1fr; }
+  .skill-cta-btns { flex-direction: column; align-items: center; }
+  .modal-btn { width: 100%; max-width: 280px; text-align: center; }
+}
