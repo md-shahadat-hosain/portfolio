@@ -170,3 +170,88 @@ function handleContactSubmit(e) {
   alert(`Thank you, ${name}! Your message has been received.\nFor a quick response, please also reach out via WhatsApp or Facebook.`);
   e.target.reset();
 }
+
+/* ── TYPING EFFECT ───────────────────────────────────────── */
+const typingTexts = [
+  'Digital Professional',
+  'MS Office Expert',
+  'Graphic Designer',
+  'Business Growth Specialist',
+  'Website Manager',
+  'Social Media Expert'
+];
+
+const typingElement = document.querySelector('.typing-text');
+const typingCursor = document.querySelector('.typing-cursor');
+
+let textIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+let typeSpeed = 80;
+
+function typeEffect() {
+  const currentText = typingTexts[textIndex];
+  
+  if (isDeleting) {
+    typingElement.textContent = currentText.substring(0, charIndex - 1);
+    charIndex--;
+    typeSpeed = 40;
+  } else {
+    typingElement.textContent = currentText.substring(0, charIndex + 1);
+    charIndex++;
+    typeSpeed = 80;
+  }
+  
+  if (!isDeleting && charIndex === currentText.length) {
+    // Pause at end of text
+    typeSpeed = 2000;
+    isDeleting = true;
+  } else if (isDeleting && charIndex === 0) {
+    // Move to next text
+    isDeleting = false;
+    textIndex = (textIndex + 1) % typingTexts.length;
+    typeSpeed = 500;
+  }
+  
+  setTimeout(typeEffect, typeSpeed);
+}
+
+// Start typing effect when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+  setTimeout(typeEffect, 1500);
+});
+
+/* ── CONTACT POPUP ────────────────────────────────────────── */
+const contactPopupOverlay = document.getElementById('contactPopupOverlay');
+
+// Open contact popup function
+function openContactPopup() {
+  contactPopupOverlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+// Close contact popup function
+function closeContactPopup() {
+  contactPopupOverlay.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+// Close popup when clicking outside
+contactPopupOverlay.addEventListener('click', (e) => {
+  if (e.target === contactPopupOverlay) closeContactPopup();
+});
+
+// Close popup on Escape key
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && contactPopupOverlay.classList.contains('open')) {
+    closeContactPopup();
+  }
+});
+
+// Make Contact buttons open the popup
+document.querySelectorAll('a[href="#contact"]').forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    openContactPopup();
+  });
+});
