@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Business Growth Management — Md. Shahadat Hosain</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/skill-page.css">
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="nav-brand">
+    <div class="nav-avatar">MSH</div>
+    <span class="nav-brand-name">Md. Shahadat Hosain</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../index.html#skills" class="active">Skills</a></li>
+    <li><a href="../index.html#services">Services</a></li>
+    <li><a href="../index.html#contact">Contact</a></li>
+  </ul>
+  <a href="../index.html#contact" class="nav-contact">Contact</a>
+  <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html" onclick="closeMobile()">Home</a>
+  <a href="../index.html#skills" onclick="closeMobile()">Skills</a>
+  <a href="../index.html#services" onclick="closeMobile()">Services</a>
+  <a href="../index.html#contact" onclick="closeMobile()">Contact</a>
+</div>
+
+<div class="skill-hero" style="--hero-color1:#d1fae5;--hero-color2:#ede9fe;--hero-color3:#fef3c7;">
+  <div class="skill-hero-bg"></div>
+  <div class="skill-hero-content">
+    <a href="../index.html#skills" class="back-btn">← Back to Skills</a>
+    <div class="skill-hero-icon">📈</div>
+    <h1 class="skill-hero-title">Business Growth Management</h1>
+    <p class="skill-hero-subtitle">Strategy · Planning · Market Analysis · Optimization</p>
+    <p class="skill-hero-desc">Building strategies that turn opportunities into revenue and ideas into measurable business growth.</p>
+  </div>
+</div>
+
+<main class="skill-main">
+
+  <section class="skill-section">
+    <h2 class="skill-section-title">About This Skill</h2>
+    <p class="skill-text">I help businesses identify growth opportunities, eliminate what's holding them back, and build clear, actionable strategies to move forward. Whether you're launching a new venture or scaling an existing one, I bring structured thinking and practical tools to drive real results.</p>
+  </section>
+
+  <section class="skill-section">
+    <h2 class="skill-section-title">Tools I Use</h2>
+    <div class="tool-grid">
+      <div class="tool-item"><span class="tool-icon">📊</span><span>Google Analytics</span></div>
+      <div class="tool-item"><span class="tool-icon">📘</span><span>Meta Business Suite</span></div>
+      <div class="tool-item"><span class="tool-icon">✅</span><span>Trello</span></div>
+      <div class="tool-item"><span class="tool-icon">📝</span><span>Notion</span></div>
+      <div class="tool-item"><span class="tool-icon">☁️</span><span>Google Workspace</span></div>
+      <div class="tool-item"><span class="tool-icon">📈</span><span>Semrush</span></div>
+    </div>
+  </section>
+
+  <section class="skill-section">
+    <h2 class="skill-section-title">What I Offer</h2>
+    <div class="offer-list">
+      <div class="offer-item"><div class="offer-check">✓</div><div><strong>Business Strategy & Growth Planning</strong><p>Clear, structured plans with realistic goals, timelines and accountability frameworks.</p></div></div>
+      <div class="offer-item"><div class="offer-check">✓</div><div><strong>Competitor & Market Research</strong><p>In-depth analysis of your market, competitors and target audience to find your edge.</p></div></div>
+      <div class="offer-item"><div class="offer-check">✓</div><div><strong>KPI Setting & Reporting</strong><p>Define the right metrics, build tracking systems and produce clear performance reports.</p></div></div>
+      <div class="offer-item"><div class="offer-check">✓</div><div><strong>Process Optimization</strong><p>Identify inefficiencies in your workflows and implement streamlined processes.</p></div></div>
+      <div class="offer-item"><div class="offer-check">✓</div><div><strong>Customer Journey Mapping</strong><p>Understand how customers experience your brand and improve conversion at every step.</p></div></div>
+      <div class="offer-item"><div class="offer-check">✓</div><div><strong>Brand Positioning</strong><p>Define your unique value proposition and how to communicate it effectively.</p></div></div>
+    </div>
+  </section>
+
+  <section class="skill-section">
+    <h2 class="skill-section-title">Why Choose Me?</h2>
+    <div class="why-grid">
+      <div class="why-card"><div class="why-num">01</div><h3>Results-Driven</h3><p>Every recommendation I make is tied to measurable outcomes — not just theory.</p></div>
+      <div class="why-card"><div class="why-num">02</div><h3>Practical Approach</h3><p>Actionable strategies you can implement right away, not 50-page reports that gather dust.</p></div>
+      <div class="why-card"><div class="why-num">03</div><h3>Long-Term Thinking</h3><p>I focus on sustainable growth, not quick fixes that cause problems later.</p></div>
+    </div>
+  </section>
+
+  <div class="skill-cta-section">
+    <h2>Ready to grow your business?</h2>
+    <p>Let's build a strategy that actually works.</p>
+    <div class="skill-cta-btns">
+      <a href="../index.html#contact" class="modal-btn modal-btn-primary">Hire Me</a>
+      <a href="https://wa.me/8801868901103" target="_blank" class="modal-btn modal-btn-outline">WhatsApp Me</a>
+    </div>
+  </div>
+
+</main>
+
+<footer><p>&copy; 2026 <span>Md. Shahadat Hosain</span>. All rights reserved.</p></footer>
+<script>
+const hamburger=document.getElementById('hamburger');
+const mobileMenu=document.getElementById('mobileMenu');
+hamburger.addEventListener('click',()=>{hamburger.classList.toggle('open');mobileMenu.classList.toggle('open');});
+function closeMobile(){hamburger.classList.remove('open');mobileMenu.classList.remove('open');}
+</script>
+</body>
+</html>
